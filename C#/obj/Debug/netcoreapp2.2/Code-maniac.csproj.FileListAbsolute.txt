@@ -1,0 +1,44 @@
+E:\bin\Debug\netcoreapp2.2\Code-maniac.deps.json
+E:\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.json
+E:\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.dev.json
+E:\bin\Debug\netcoreapp2.2\Code-maniac.dll
+E:\bin\Debug\netcoreapp2.2\Code-maniac.pdb
+E:\obj\Debug\netcoreapp2.2\Code-maniac.csprojAssemblyReference.cache
+E:\obj\Debug\netcoreapp2.2\Code-maniac.csproj.CoreCompileInputs.cache
+E:\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfoInputs.cache
+E:\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfo.cs
+E:\obj\Debug\netcoreapp2.2\Code-maniac.dll
+E:\obj\Debug\netcoreapp2.2\Code-maniac.pdb
+E:\Code-maniac\bin\Debug\netcoreapp2.2\Code-maniac.deps.json
+E:\Code-maniac\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.json
+E:\Code-maniac\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.dev.json
+E:\Code-maniac\bin\Debug\netcoreapp2.2\Code-maniac.dll
+E:\Code-maniac\bin\Debug\netcoreapp2.2\Code-maniac.pdb
+E:\Code-maniac\obj\Debug\netcoreapp2.2\Code-maniac.csprojAssemblyReference.cache
+E:\Code-maniac\obj\Debug\netcoreapp2.2\Code-maniac.csproj.CoreCompileInputs.cache
+E:\Code-maniac\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfoInputs.cache
+E:\Code-maniac\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfo.cs
+E:\Code-maniac\obj\Debug\netcoreapp2.2\Code-maniac.dll
+E:\Code-maniac\obj\Debug\netcoreapp2.2\Code-maniac.pdb
+E:\Code-maniac\C#\bin\Debug\netcoreapp2.2\Code-maniac.deps.json
+E:\Code-maniac\C#\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.json
+E:\Code-maniac\C#\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.dev.json
+E:\Code-maniac\C#\bin\Debug\netcoreapp2.2\Code-maniac.dll
+E:\Code-maniac\C#\bin\Debug\netcoreapp2.2\Code-maniac.pdb
+E:\Code-maniac\C#\obj\Debug\netcoreapp2.2\Code-maniac.csprojAssemblyReference.cache
+E:\Code-maniac\C#\obj\Debug\netcoreapp2.2\Code-maniac.csproj.CoreCompileInputs.cache
+E:\Code-maniac\C#\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfoInputs.cache
+E:\Code-maniac\C#\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfo.cs
+E:\Code-maniac\C#\obj\Debug\netcoreapp2.2\Code-maniac.dll
+E:\Code-maniac\C#\obj\Debug\netcoreapp2.2\Code-maniac.pdb
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\bin\Debug\netcoreapp2.2\Code-maniac.deps.json
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.json
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\bin\Debug\netcoreapp2.2\Code-maniac.runtimeconfig.dev.json
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\bin\Debug\netcoreapp2.2\Code-maniac.dll
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\bin\Debug\netcoreapp2.2\Code-maniac.pdb
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\obj\Debug\netcoreapp2.2\Code-maniac.csprojAssemblyReference.cache
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\obj\Debug\netcoreapp2.2\Code-maniac.csproj.CoreCompileInputs.cache
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfoInputs.cache
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\obj\Debug\netcoreapp2.2\Code-maniac.AssemblyInfo.cs
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\obj\Debug\netcoreapp2.2\Code-maniac.dll
+E:\Code-maniac\DSA GIT\Data-Structures-and-Algorithms\C#\obj\Debug\netcoreapp2.2\Code-maniac.pdb
