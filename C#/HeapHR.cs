@@ -79,38 +79,38 @@ class HHR {
             return value;
         }
     }
-    static void Main(String[] args) {
-        string[] arr = {
-            "1 286789035",
-            "1 255653921",
-            "1 274310529",
-            "1 494521015",
-            "3",
-            "2 255653921",
-            "2 286789035",
-            "3",
-            "1 236295092",
-            "1 254828111",
-            "2 254828111",
-            "1 465995753",
-            "1 85886315",
-            "1 7959587",
-            "1 20842598",
-            "2 7959587",
-            "3",
-            "1 -51159108",
-            "3",
-            "2 -51159108",
-            "3",
-            "1 789534713",
-        };
-        foreach(var ele in arr){
-            string[] temp = ele.Split(' ');
-            int a = Convert.ToInt32(temp[0]);
-            if(a == 1)  Insert(Convert.ToInt32(temp[1]));
-            else if(a == 2) Remove(Convert.ToInt32(temp[1]));
-            else    Console.WriteLine(Peek());
-        }
-    }
+    // static void Main(String[] args) {
+    //     string[] arr = {
+    //         "1 286789035",
+    //         "1 255653921",
+    //         "1 274310529",
+    //         "1 494521015",
+    //         "3",
+    //         "2 255653921",
+    //         "2 286789035",
+    //         "3",
+    //         "1 236295092",
+    //         "1 254828111",
+    //         "2 254828111",
+    //         "1 465995753",
+    //         "1 85886315",
+    //         "1 7959587",
+    //         "1 20842598",
+    //         "2 7959587",
+    //         "3",
+    //         "1 -51159108",
+    //         "3",
+    //         "2 -51159108",
+    //         "3",
+    //         "1 789534713",
+    //     };
+    //     foreach(var ele in arr){
+    //         string[] temp = ele.Split(' ');
+    //         int a = Convert.ToInt32(temp[0]);
+    //         if(a == 1)  Insert(Convert.ToInt32(temp[1]));
+    //         else if(a == 2) Remove(Convert.ToInt32(temp[1]));
+    //         else    Console.WriteLine(Peek());
+    //     }
+    // }
 }
 
