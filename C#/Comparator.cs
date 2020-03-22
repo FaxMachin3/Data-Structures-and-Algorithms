@@ -17,7 +17,13 @@ class Comparer{
     // public static void Main(string[] args){
     //     Compi c = new Compi();
     //     string[] arr = new string[5]{"subham", "raj", "killer", "rajesh", "rakesh"};
-    //     Array.Sort(arr,c);
+    //     Array.Sort(arr,delegate(string x, string y){
+    //         if(x.Length < y.Length) return -1;
+    //         else if(x.Length > y.Length)    return 1;
+    //         else{
+    //             return x.CompareTo(y);
+    //         }
+    //     });
     //     Console.WriteLine(string.Join(" ",arr));
     // }
 }
