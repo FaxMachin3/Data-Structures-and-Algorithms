@@ -7,19 +7,22 @@ class QuickSortRandomized {
         a[j] = temp;
     }
     public static int Partition(int[] a, int l, int h){
-        int randomPivot = new Random().Next(l, h + 1);
-        int i = l;
-        int j = h;
+        Swap(a, new Random().Next(l, h + 1), h);
+        
+        int pivot = a[h];
 
-        while(i < j){
-            while(a[i] < a[randomPivot])    i++;
-            while(a[j] > a[randomPivot])    j--;
-            if(i < j)   Swap(a, i, j);
+        int i = l - 1;
+
+        for(int j = l; j < h; j++){
+            if(a[j] < pivot){
+                i++;
+                Swap(a, i, j);
+            }
         }
 
-        Swap(a, i, randomPivot);
+        Swap(a, i + 1, h);
 
-        return i;
+        return i + 1;
     }
     public static void QuickSort(int[] a, int l, int h){
         if(l < h){
@@ -28,13 +31,13 @@ class QuickSortRandomized {
             QuickSort(a, j + 1, h);
         }
     }
-    // public static void Main(string[] args){
-    //     int[] arr = {67, 12, 95, 56, 85, 1, 100, 23, 60, 9};
+    public static void Main(string[] args){
+        int[] arr = {67, 12, 95, 56, 85, 1, 100, 23, 60, 9, 123, 3, 3};
 
-    //     int low = 0;
-    //     int high = arr.Length - 1;
-    //     Console.WriteLine(string.Join(" ",arr));
-    //     QuickSort(arr, low, high);
-    //     Console.WriteLine(string.Join(" ",arr));
-    // }
+        int low = 0;
+        int high = arr.Length - 1;
+        Console.WriteLine(string.Join(" ",arr));
+        QuickSort(arr, low, high);
+        Console.WriteLine(string.Join(" ",arr));
+    }
 }

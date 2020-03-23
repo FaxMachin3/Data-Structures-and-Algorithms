@@ -46,7 +46,7 @@ public class Asteroid {
         return result;
     }
 
-    public static void Main(String[] args){
-        Console.WriteLine(string.Join(" ",AsteroidCollision(new int[]{1,-2,-2,-2})));
-    }
+    // public static void Main(String[] args){
+    //     Console.WriteLine(string.Join(" ",AsteroidCollision(new int[]{1,-2,-2,-2})));
+    // }
 }
