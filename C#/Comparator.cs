@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 class Compi : IComparer<string>
 {
@@ -25,5 +26,8 @@ class Comparer{
     //         }
     //     });
     //     Console.WriteLine(string.Join(" ",arr));
+    
+    // int[] a = new int[] {10, 40, 33, 33, 31, 56, 57, 6};
+    // Console.WriteLine(string.Join( " " , a.Distinct().ToArray().OrderBy(x => x)));
     // }
 }

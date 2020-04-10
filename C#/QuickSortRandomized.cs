@@ -31,13 +31,13 @@ class QuickSortRandomized {
             QuickSort(a, j + 1, h);
         }
     }
-    public static void Main(string[] args){
-        int[] arr = {67, 12, 95, 56, 85, 1, 100, 23, 60, 9, 123, 3, 3};
+    // public static void Main(string[] args){
+    //     int[] arr = {67, 12, 95, 56, 85, 1, 100, 23, 60, 9, 123, 3, 3};
 
-        int low = 0;
-        int high = arr.Length - 1;
-        Console.WriteLine(string.Join(" ",arr));
-        QuickSort(arr, low, high);
-        Console.WriteLine(string.Join(" ",arr));
-    }
+    //     int low = 0;
+    //     int high = arr.Length - 1;
+    //     Console.WriteLine(string.Join(" ",arr));
+    //     QuickSort(arr, low, high);
+    //     Console.WriteLine(string.Join(" ",arr));
+    // }
 }
