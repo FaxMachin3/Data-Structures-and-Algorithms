@@ -40,7 +40,7 @@ public class MSW {
         }
         return result;
     }
-    public static void Main (string[] args) {
-        Console.WriteLine (string.Join (" ", MaxSlidingWindow (new int[] { 9, 10, 9, -7, -4, -8, 2, -6 }, 5)));
-    }
+    // public static void Main (string[] args) {
+    //     Console.WriteLine (string.Join (" ", MaxSlidingWindow (new int[] { 9, 10, 9, -7, -4, -8, 2, -6 }, 5)));
+    // }
 }
