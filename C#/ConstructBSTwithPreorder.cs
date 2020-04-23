@@ -36,7 +36,7 @@ public class BSTPreorder {
         int postion = ConstructBST (root, 1, preorder, int.MinValue, int.MaxValue);
         return root;
     }
-    public static void Main (string[] args) {
-        TreeNode bst = BstFromPreorder (new int[] { 8, 5, 1, 7, 10, 12 });
-    }
+    // public static void Main (string[] args) {
+    //     TreeNode bst = BstFromPreorder (new int[] { 8, 5, 1, 7, 10, 12 });
+    // }
 }

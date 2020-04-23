@@ -26,14 +26,14 @@ class FC {
         for(int i = 0; i < queries.Length; i++){
             adjacentList[queries[i][0]].AddLast(queries[i][1]);
             adjacentList[queries[i][1]].AddLast(queries[i][0]);
-            int currHandShakes = dfs(adjacentList,queries[i][0]);
+            int currHandShakes = bfs(adjacentList,queries[i][0]);
             if(currHandShakes > maxHandShakes)
                 maxHandShakes = currHandShakes;
             result[i] = maxHandShakes;
         }
         return result;
     }
-    static int dfs(Dictionary<int,LinkedList<int>> adjacentList, int root){
+    static int bfs(Dictionary<int,LinkedList<int>> adjacentList, int root){
         int count = 1;
         Dictionary<int, bool> visited = new Dictionary<int, bool>();
         Queue<int> q = new Queue<int>();
