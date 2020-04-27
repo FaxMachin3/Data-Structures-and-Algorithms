@@ -54,13 +54,13 @@ public class LRUCache {
 }
 
 class DriverLRU {
-    public static void Main (String[] args) {
-        LRUCache obj = new LRUCache (2);
-        obj.Put (2, 1);
-        obj.Put (1, 1);
-        obj.Put (2, 3);
-        obj.Put (4, 1);
-        Console.WriteLine (obj.Get (1));
-        Console.WriteLine (obj.Get (2));
-    }
+    // public static void Main (String[] args) {
+    //     LRUCache obj = new LRUCache (2);
+    //     obj.Put (2, 1);
+    //     obj.Put (1, 1);
+    //     obj.Put (2, 3);
+    //     obj.Put (4, 1);
+    //     Console.WriteLine (obj.Get (1));
+    //     Console.WriteLine (obj.Get (2));
+    // }
 }
