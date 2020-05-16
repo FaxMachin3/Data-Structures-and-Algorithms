@@ -6,50 +6,77 @@ public class WS {
     public static bool Exist (char[][] board, string word) {
         int[] dr = new int[] {-1, 0, 1, 0 };
         int[] dc = new int[] { 0, 1, 0, -1 };
-        Stack<Tuple<int, int>> s = new Stack<Tuple<int, int>> ();
-        for (int i = 0; i < board.Length; i++) {
-            for (int j = 0; j < board[0].Length; j++) {
-                s.Clear();
-                int[, ] vis = new int[board.Length, board[0].Length];
-                if (board[i][j] == word[0]) {
-                    if (word.Length == 1) return true;
-                    else {
-                        s.Push (new Tuple<int, int> (i, j));
-                        vis[i, j] = 1;
-                    }
-                }
-                int index = 1;
-                while (s.Count > 0) {
-                    Tuple<int, int> popped = s.Pop ();
-                    bool flag = true;
-                    int x = popped.Item1;
-                    int y = popped.Item2;
-                    for (int k = 0; k < dr.Length; k++) {
-                        int newX = x + dr[k];
-                        int newY = y + dc[k];
-                        if (newX < 0 || newY < 0) continue;
-                        else if (newX >= board.Length || newY >= board[0].Length) continue;
-                        else if (vis[newX, newY] == 1) continue;
-                        else if (board[newX][newY] != word[index]) continue;
 
-                        if (board[newX][newY] == word[index]) {
-                            vis[newX, newY] = 1;
-                            if (index == word.Length - 1) return true;
-                            s.Push (new Tuple<int, int> (newX, newY));
-                            flag = false;
+        Stack<Tuple<int, int, int>> s = new Stack<Tuple<int, int, int>> ();
+        Stack<Tuple<int, int>> track = new Stack<Tuple<int, int>> ();
+
+        for (int row = 0; row < board.Length; row++) {
+            for (int col = 0; col < board[0].Length; col++) {
+                if (board[row][col] != word[0]) continue;
+
+                if (0 == word.Length - 1)
+                    return true;
+
+                bool[, ] visited = new bool[board.Length, board[0].Length];
+                int[, ] subPath = new int[board.Length, board[0].Length];
+                s.Push (new Tuple<int, int, int> (row, col, 0));
+
+                while (s.Count != 0) {
+                    Tuple<int, int, int> pos = s.Pop ();
+                    int x = pos.Item1;
+                    int y = pos.Item2;
+                    int index = pos.Item3;
+
+                    int countSubPath = 0;
+
+                    visited[x, y] = true;
+
+                    track.Push (new Tuple<int, int> (x, y));
+
+                    for (int i = 0; i < 4; i++) {
+                        int newRow = x + dr[i];
+                        int newCol = y + dc[i];
+
+                        if (newRow < 0 || newCol < 0) continue;
+                        if (newRow >= board.Length || newCol >= board[0].Length) continue;
+                        if (visited[newRow, newCol]) continue;
+
+                        if (board[newRow][newCol] == word[index + 1]) {
+                            if (index + 1 == word.Length - 1)
+                                return true;
+                            s.Push (new Tuple<int, int, int> (newRow, newCol, index + 1));
+                            countSubPath++;
                         }
                     }
-                    if (!flag) index++;
+
+                    subPath[x, y] = countSubPath;
+                    if (subPath[x, y] == 0) {
+                        Tuple<int, int> tempPos = track.Pop ();
+                        int cur_x = tempPos.Item1;
+                        int cur_y = tempPos.Item2;
+                        while (subPath[cur_x, cur_y] <= 1) {
+                            visited[cur_x, cur_y] = false;
+                            if (track.Count == 0) { break; }
+                            tempPos = track.Pop ();
+                            cur_x = tempPos.Item1;
+                            cur_y = tempPos.Item2;
+                        }
+                        subPath[cur_x, cur_y]--;
+                    }
                 }
+
+                s.Clear ();
+                track.Clear ();
             }
         }
+
         return false;
     }
     // public static void Main (string[] args) {
-    //     // Console.WriteLine (Exist (new char[][] {
-    //     //     new char[] { 'A', 'B', 'C', 'E' },
-    //     //         new char[] { 'S', 'F', 'E', 'S' },
-    //     //         new char[] { 'A', 'D', 'E', 'E' }
-    //     // }, "ABCESEEEFS"));
+    //     Console.WriteLine (Exist (new char[][] {
+    //         new char[] { 'A', 'B', 'C', 'E' },
+    //             new char[] { 'S', 'F', 'E', 'S' },
+    //             new char[] { 'A', 'D', 'E', 'E' }
+    //     }, "ABCESEEEFS"));
     // }
 }
