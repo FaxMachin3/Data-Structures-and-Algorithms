@@ -1,74 +1,68 @@
-// using System;
-// using System.Collections.Generic;
+/*
+// Sample code to perform I/O:
 
-// public class DC {
-//     static Dictionary<int, LinkedList<int>> adjacencyList;
-//     static int totalCycles;
+name = Console.ReadLine();                  // Reading input from STDIN
+Console.WriteLine("Hi, {0}.", name);        // Writing output to STDOUT
 
-//     public static void MakeList (int[] edge) {
-//         adjacencyList[edge[0]].AddLast (edge[1]);
-//         adjacencyList[edge[1]].AddLast (edge[0]);
-//     }
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
 
-//     public static void CountCycle (int m) {
-//         bool[] visited = new bool[m + 1];
-//         int[] parent = new int[m + 1];
-//         parent[1] = -1;
-//         parent[0] = -1;
+// Write your code here
+using System;
+using System.Collections.Generic;
 
-//         Stack<int> s = new Stack<int> ();
-//         for (int i = 1; i <= m; i++) {
-//             if (visited[i]) continue;
-//             s.Push (i);
-//             visited[i] = true;
-//             while (s.Count > 0) {
-//                 bool flag = false;
-//                 int node = s.Pop ();
-//                 foreach (var ele in adjacencyList[node]) {
-//                     if (!visited[ele]) {
-//                         visited[ele] = true;
-//                         parent[ele] = node;
-//                         s.Push (ele);
-//                     } else if (ele != parent[node]) {
-//                         totalCycles++;
-//                         flag = true;
-//                         break;
-//                     }
-//                 }
-//                 if (flag) {
-//                     s.Clear ();
-//                     break;
-//                 }
-//             }
-//         }
-//     }
+public class DC {
+    static Dictionary<int, LinkedList<int>> adjacencyList;
+    static int totalCycles;
 
-//     // public static void Main (string[] args) {
-//     //     int[] arr = new int[] { 17, 15 };
-//     //     int m = arr[0];
-//     //     int n = arr[1];
-//     //     adjacencyList = new Dictionary<int, LinkedList<int>> ();
-//     //     totalCycles = 0;
-//     //     for (int i = 1; i <= m; i++) {
-//     //         adjacencyList[i] = new LinkedList<int> ();
-//     //     }
-//     //     MakeList (new int[] { 1, 8 });
-//     //     MakeList (new int[] { 1, 12 });
-//     //     MakeList (new int[] { 5, 11 });
-//     //     MakeList (new int[] { 11, 9 });
-//     //     MakeList (new int[] { 9, 15 });
-//     //     MakeList (new int[] { 15, 5 });
-//     //     MakeList (new int[] { 4, 13 });
-//     //     MakeList (new int[] { 3, 13 });
-//     //     MakeList (new int[] { 4, 3 });
-//     //     MakeList (new int[] { 10, 16 });
-//     //     MakeList (new int[] { 7, 10 });
-//     //     MakeList (new int[] { 16, 7 });
-//     //     MakeList (new int[] { 14, 3 });
-//     //     MakeList (new int[] { 14, 4 });
-//     //     MakeList (new int[] { 17, 6 });
-//     //     MakeList (new int[] { 12, 8 });
-//     //     CountCycle (m);
-//     //     Console.WriteLine (totalCycles);
-//     // }
-// }
+    public static void MakeList (int[] edge) {
+        adjacencyList[edge[0]].AddLast (edge[1]);
+        adjacencyList[edge[1]].AddLast (edge[0]);
+    }
+
+    public static bool isCycle (bool[] visited, int node, int parent) {
+        visited[node] = true;
+
+        foreach (var e in adjacencyList[node]) {
+            if (!visited[e]) {
+                if (isCycle (visited, e, node))
+                    return true;
+            } else if (e != parent)
+                return true;
+        }
+
+        return false;
+    }
+
+    public static void CountCycle (int m) {
+        bool[] visited = new bool[m + 1];
+
+        for (int i = 1; i <= m; i++) {
+            if (!visited[i]) {
+                if (isCycle (visited, i, -1))
+                    totalCycles++;
+            }
+        }
+    }
+
+    // public static void Main (string[] args) {
+    //     int m = 5;
+    //     // int n = 4;
+    //     adjacencyList = new Dictionary<int, LinkedList<int>> ();
+    //     totalCycles = 0;
+    //     for (int i = 1; i <= m; i++) {
+    //         adjacencyList[i] = new LinkedList<int> ();
+    //     }
+    //     int[][] input = new int[4][] {
+    //         new int[] { 1, 2 },
+    //         new int[] { 3, 4 },
+    //         new int[] { 5, 4 },
+    //         new int[] { 3, 5 },
+    //     };
+    //     foreach (var edge in input) {
+    //         MakeList (edge);
+    //     }
+    //     CountCycle (m);
+    //     Console.WriteLine (totalCycles);
+    // }
+}
