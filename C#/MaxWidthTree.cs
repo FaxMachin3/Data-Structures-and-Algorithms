@@ -20,13 +20,13 @@ public class MaxWidthTree {
 
         return Math.Max (curr, Math.Max (left, right));
     }
-    public static void Main (string[] args) {
-        TreeNode root = new TreeNode (1);
-        root.left = new TreeNode (3);
-        root.right = new TreeNode (2);
-        root.left.left = new TreeNode (5);
-        root.left.right = new TreeNode (3);
-        root.right.left = new TreeNode (9);
-        Console.WriteLine (WidthOfBinaryTree (root));
-    }
+    // public static void Main (string[] args) {
+    //     TreeNode root = new TreeNode (1);
+    //     root.left = new TreeNode (3);
+    //     root.right = new TreeNode (2);
+    //     root.left.left = new TreeNode (5);
+    //     root.left.right = new TreeNode (3);
+    //     root.right.left = new TreeNode (9);
+    //     Console.WriteLine (WidthOfBinaryTree (root));
+    // }
 }
