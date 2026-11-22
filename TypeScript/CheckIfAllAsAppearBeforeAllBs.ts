@@ -6,7 +6,7 @@ function checkString(s: string): boolean {
 
     for(let i = 0; i < s.length; i++) {
         if(s[i] === 'b') foundB = true;
-        else if(foundB && s[i] === 'a') return false;
+        else if(foundB) return false;
     }
 
     return true;
