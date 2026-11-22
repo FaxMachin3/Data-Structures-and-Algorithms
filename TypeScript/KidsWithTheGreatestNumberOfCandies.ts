@@ -10,8 +10,7 @@ function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
     }
 
     for(let i = 0; i < candies.length; i++) {
-        if(candies[i]+extraCandies >= maxC) result[i] = true;
-        else result[i] = false;
+        result[i] = candies[i]+extraCandies >= maxC;
     }
 
     return result;
